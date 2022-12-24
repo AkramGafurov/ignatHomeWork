@@ -14,28 +14,41 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any
+export type UserType = {
+    avatar: string,
+    name: string,
+}
+export type UserMessageType = {
+    text: string,
+    time: string,
+}
+export type MessageType = {
+    id:number,
+    user: UserType,
+    message: UserMessageType,
+}
 
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        avatar: 'https://pm1.narvii.com/7078/a8e8bb00184ae1989c81cae60043dd79f17a0c56r1-660-440v2_128.jpg', // можно менять
+        name: 'Stallone',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
+        text: 'Hello, she didn’t do anything and rested all day, how are you?!', // можно менять
         time: '22:00', // можно менять
     },
 }
+
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: 'https://i.mycdn.me/i?r=AzExTCcIQuhnRIX9gBwt8KAMlinGJ8FfA6hkX73Hyq-t6RuAbMauzUN6nRMsKSGM26k&fn=sqr_128', // можно менять
+        name: 'Bruce', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
+        text: 'Hello, she didn’t do anything and rested all day, how are you?! ', // можно менять
         time: '22:00', // можно менять
     },
 }
