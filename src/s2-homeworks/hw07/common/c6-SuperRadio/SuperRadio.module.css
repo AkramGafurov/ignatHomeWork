@@ -1,15 +1,26 @@
 .radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-right: 5px;
 }
 
 .radio::before {
+    content: url("unChecked.png");
 }
 
 
 .radio:checked::before {
+    content: url("checked.png");
 }
 
 .label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
 }
