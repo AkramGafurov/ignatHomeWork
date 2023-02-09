@@ -49,7 +49,7 @@ function Clock() {
     let stringTime = (hours > 9 ? hours : '0' + hours) + ':' + (minutes > 9 ? minutes : '0' + minutes) + ':' + (seconds > 9 ? seconds : '0' + seconds) ||
         <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
 
-    const stringDate = (curDate > 9 ? curDate : '0' + curDate) + '.' + (month > 9 ? month : '0' + month) + '.' + year || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringDate = (curDate > 9 ? curDate : '0' + curDate) + '.' + (month > 9 ? month+1 : '0' + (month+1)) + '.' + year || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
 
 
